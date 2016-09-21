@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>搜索用户页</title>
+</head>
+<body>
+<!-- title -->
+<div class='header-wrap'>
+	<div class='header-box'>
+		<div class='header'>
+			<div class='header-logo'><img src="img/logo_cat.png" alt='logo'></div>
+			<div class='header-search'>
+				<input type="text" placeholder='歌曲\音乐人' class='search'>
+				<i class='icomoon search-font'>&#xe986</i>
+			</div>
+			<div class="header-nav">
+				<ul>
+					<li><a href="friend">寻找好友</a></li>
+					<li><a href="show">歌曲列表</a></li>
+					<li><a href="play">去播放</a></li>
+				</ul>
+			</div>
+			<div class='header-info'>
+				<ul class="header-info-ls" id='userInfo'>
+					<li>
+						<a href="javascript:void(0);" id='alarm'>
+							<i class='icomoon'>&#xe951</i>
+							<i class='msg-num'></i>
+						</a>
+
+					</li>
+					<li class='set-info'>
+						<a href="personal" id='name'></a>
+						<a href="javascript:void(0);" >
+							<i class='icomoon arrow' id='headerArrow' type='0'>&#xea41</i>
+						</a>
+					</li>
+
+				</ul>
+				<ul class="header-info-ls" id='userNone'>
+					<li>
+						<a href="login">登陆</a>
+					</li>
+					<li class='set-info'>
+						<a href="register" >注册</a>
+					</li>
+				</ul>
+				<a href="javascript:void(0);" class='info'>退出登录</a>
+				<ul class='header-info-msg'>
+					<!-- <li>
+                        <a href="javascript:void(0);" class='msg'></a>
+                        <a href="javascript:void(0);" ><i class='icomoon leaf' typeId='' state='0'>&#xe9a4</i></a>
+                    </li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- search -->
+<div class='list-search-wrap'>
+	<div class='list-search-box'>
+		<input type="text" class='list-search' id='userInput'>
+		<i class='icomoon list-search-label' id='searchUser'>&#xe986</i>
+		<span class='list-tishi'>用户名称</span>
+	</div>
+</div>
+
+
+<!-- content -->
+<div class='search-user-wrap'>
+	<div class='search-user-box'>
+		<div class='search-user'>
+			<ul class='user-list'>
+				<!--<li>
+					<img src="img/xzq.jpg" >
+					<span class='search-user-name'>薛之谦</span>
+					<p class='search-friend-num'>
+						<i>23</i>Fllowings
+						<i>23</i>Fllowers
+					</p>
+					<a href="javascript:void(0);" class='search-btn'>加关注</a>
+				</li>-->
+
+			</ul>
+		</div>
+	</div>
+	<div class="page-wrap">
+		<div class="page-box">
+			<div id="page"></div>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<div class='footer-wrap'>
+	<div class='footer'>
+		<p>Copyright 2016 汪星人</p>
+		<p>鸣谢：王雅男&商盼盼</p>
+		<p>毕业愉快</p>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src='js/jquery-2.1.4.min.js'></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/searchUser.js"></script>
+<script type="text/javascript" src="js/laypage/laypage.js"></script>
+
+</html>

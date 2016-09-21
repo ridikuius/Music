@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理员-上传音乐界面</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<!-- title -->
+<div class='header-wrap'>
+	<div class='header-box'>
+		<div class='header'>
+			<div class='header-logo'><img src="img/logo_cat.png" alt='logo'></div>
+			<div class="header-nav">
+				<ul>
+					<li><a href="admin.html">音乐管理</a></li>
+					<li><a href="adminUser.html">用户管理</a></li>
+					<li><a href="adminUser.html">歌曲上传</a></li>
+				</ul>
+			</div>
+			<div class='header-info'>
+				<ul class="header-info-ls">
+					<li class='set-info'>
+						<a href="javascript:void(0);" id='name'>admin</a>
+						<a href="javascript:void(0);" ><i class='icomoon arrow'  id='headerArrow'>&#xea41</i></a>
+					</li>
+				</ul>
+				<a href="javascript:void(0);" class='info'  id="quite">退出登录</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- content -->
+<!-- content -->
+<div class='publish-wrap'>
+	<div class='publish-box'>
+		<div class='publish'>
+			<div class='publish-label'>
+				<p><span class='w4'>歌曲名称</span></p>
+				<p><span class='w4'>歌手名称</span></p>
+				<p><span class='w2'>价格</span></p>
+				<!-- <p><span class='w2'>押金</span></p> -->
+				<p><span class='w2'>类型</span></p>
+				<!-- <p><span class='w2'>成色</span></p> -->
+				<!-- <p class='publish-label-detail'><span class='w2'>描述</span></p> -->
+				<!-- <p><span class='w2'>电话</span></p> -->
+				<!-- <p><span class='w2'>地址</span></p> -->
+				<p class='img-label'><span class='w2'>歌曲</span></p>
+				<!-- <p><span class='w2'>组图</span></p> -->
+			</div>
+			<div class='publish-content'>
+				<div><input type="text" id='musicName'></div>
+				<div><input type="text" id='musicSinger'></div>
+				<div><input type="text" id='musicMoney'></div>
+				<!-- <div><input type="text" id='shopDeposit'></div> -->
+				<div class='shop-type-parent'>
+					<ul class='shop-type-ls shop-ls' id='musicType'>
+						<!--<li class='shop-type active'><a href="javascript:void(0);">抒情</a></li>
+						<li class='shop-type'><a href="javascript:void(0);">轻音乐</a></li>
+						<li class='shop-type'><a href="javascript:void(0);">欧美</a></li>
+						<li class='shop-type'><a href="javascript:void(0);">日韩</a></li>
+						<li class='shop-type'><a href="javascript:void(0);">电子</a></li>-->
+					</ul>
+				</div>
+				<!-- <div>
+                    <ul class='shop-judeg-ls shop-ls'>
+                        <li class='shop-type active'><a href="javascript:void(0);">六成新</a></li>
+                        <li class='shop-type'><a href="javascript:void(0);">七成新</a></li>
+                        <li class='shop-type'><a href="javascript:void(0);">八成新</a></li>
+                        <li class='shop-type'><a href="javascript:void(0);">九成新</a></li>
+                        <li class='shop-type'><a href="javascript:void(0);">完好无损</a></li>
+                    </ul>
+                </div> -->
+				<!-- <div class='shop-deta'>
+                    <textarea id='shopDetail'></textarea>
+                </div> -->
+				<!-- <div><input type="text" id='shopTel'></div> -->
+				<!-- <div><input type="text" id='shopAddress'></div> -->
+				<div>
+				<!--	<form  method="post" enctype="multipart/form-data" id='form' data-type='0'>
+						<input type="file" name='file' id='musicLogo'  class='fileMusic'>
+						<input type="submit" value='上传'  class='fileBtn'>
+					</form>
+-->
+					<input type="file" name='file' id='musicLogo' data-type='0'>
+				</div>
+				<!-- <div><input type="file" multiple id='shopPics'></div> -->
+			</div>
+			<div class='publish-warn'>
+				<p class='warn1'>歌曲名称不能为空</p>
+				<p class='warn2'>歌手名称不能为空</p><!--歌曲名称不能超过20个字符-->
+				<p class='warn3'>请输入数字</p>
+				<!-- <p class='warn4'>请输入数字</p> -->
+				<p class='warn5'><a href="javascript:void(0);">类型不够，点这里试试？</a></p>
+				<!-- <p class='warn6'>请选择一个成色</p> -->
+				<!-- <p class='warn7'>内容不能为空哦</p> -->
+				<!-- <p class='warn8'>请输入数字</p> -->
+				<!-- <p class='warn9'>地址不能为空，汪~</p> -->
+				<p class='warn10'>必须音乐哦</p>
+				<!-- <p class='warn11'>必须上传一张图片哦</p> -->
+			</div>
+			<div style="clear: both"></div>
+			<div class='publish-submit'>
+				<a href="javascript:void(0);" id="publishOk">发布歌曲</a>
+				<a href="javascript:void(0);" id="publishCancel">暂不发布</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<div class='footer-wrap'>
+	<div class='footer'>
+		<p>Copyright ©2016 汪星人</p>
+		<p>鸣谢：王雅男&商盼盼</p>
+		<p>毕业愉快</p>
+	</div>
+</div>
+
+<!-- 添加类型 -->
+<div class='add-type-wrap'>
+	<div class='add-type'>
+		<p>添加类型，类型名称不能超过四个字</p>
+		<input type="text" id='type'>
+		<a href="javascript:void(0);" id='addType'>类型添加</a>
+		<div class='add-type-close'><a href="javascript:void(0);">X</a></div>
+	</div>
+</div>
+
+
+<!-- 添加类型成功 -->
+<div class='add-type-suc'>添加类型成功</div>
+
+</body>
+<script type="text/javascript" src='js/jquery-2.1.4.min.js'></script>
+<script type="text/javascript" src='js/jquery.cookie.js'></script>
+<script type="text/javascript" src="js/ajaxupload.3.6.js"></script>
+<script type="text/javascript" src="js/updateMusic.js"></script>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<!-- title -->
+<div class='header-wrap'>
+	<div class='header-box'>
+		<div class='header'>
+			<div class='header-logo'><img src="img/logo_cat.png" alt='logo'></div>
+			<div class='header-search'>
+				<input type="text" placeholder='歌曲\音乐人' class='search'>
+				<i class='icomoon search-font'>&#xe986</i>
+			</div>
+			<div class="header-nav">
+				<ul>
+					<li><a href="friend">寻找好友</a></li>
+					<li><a href="show">歌曲列表</a></li>
+					<li><a href="play">去播放</a></li>
+				</ul>
+			</div>
+			<div class='header-info'>
+				<ul class="header-info-ls" id='userInfo'>
+					<li>
+						<a href="javascript:void(0);" id='alarm'>
+							<i class='icomoon'>&#xe951</i>
+							<i class='msg-num'></i>
+						</a>
+
+					</li>
+					<li class='set-info'>
+						<a href="personal" id='name'></a>
+						<a href="javascript:void(0);" >
+							<i class='icomoon arrow' id='headerArrow' type='0'>&#xea41</i>
+						</a>
+					</li>
+
+				</ul>
+				<ul class="header-info-ls" id='userNone'>
+					<li>
+						<a href="login">登陆</a>
+					</li>
+					<li class='set-info'>
+						<a href="register" >注册</a>
+					</li>
+				</ul>
+				<a href="javascript:void(0);" class='info'>退出登录</a>
+				<ul class='header-info-msg'>
+					<!-- <li>
+                        <a href="javascript:void(0);" class='msg'></a>
+                        <a href="javascript:void(0);" ><i class='icomoon leaf' typeId='' state='0'>&#xe9a4</i></a>
+                    </li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 轮播图 -->
+<div class='banner-wrap'>
+	<div class='banner-box'>
+		<ul class='banner-box-ls'>
+			<li songName="故乡" songId="4" songUrl="许巍 - 故乡.mp3" singerName="许巍" songType="抒情" songTime="05:16" songCost="12" >
+                <a href="javascript:void(0);">
+                    <img src="img/xw.jpg">
+                </a>
+            </li>
+			<li songName="New Boy" songId="3" songUrl="朴树 - New Boy.mp3" singerName="朴树" songType="抒情" songTime="03:41" songCost="12" >
+				<a href="javascript:void(0);">
+					<img src="img/ps.jpg">
+				</a>
+			</li>
+			<li songName="Mascara" songId="1" songUrl="G.E.M.邓紫棋 - Mascara.mp3" singerName="邓紫棋" songType="抒情" songTime="04:07" songCost="12" >
+				<a href="javascript:void(0);">
+					<img src="img/dzq.jpg">
+				</a>
+			</li>
+			<li songName="Today" songId="5" songUrl="权志龙 - Today.mp3" singerName="权志龙" songType="抒情" songTime="04:30" songCost="12" >
+				<a href="javascript:void(0);">
+					<img src="img/pic.jpg">
+				</a>
+			</li>
+			<li songName="sexy love" songId="38" songUrl="T-ara - Sexy Love - 2013 MBC韩国仁川演唱会.mp3" singerName="T-ara" songType="日韩" songTime="03:43" songCost="7" >
+				<a href="javascript:void(0);">
+					<img src="img/tara.jpg">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<a href="javascript:void(0);" id="indexArrowLeft"><i class='icomoon index-arrow-left'>&#xea44</i></a>
+	<a href="javascript:void(0);" id="indexArrowRight"><i class='icomoon index-arrow-right'>&#xea42</i>	</a>
+</div>
+<!-- content -->
+<div class='index-con'>
+	<div class='index-part-wrap'>
+		<dl class='index-hot-nav'>
+			<dt class='index-hot-dl'><h1 class='index-h1'>热门推荐</h1></dt>
+			<dd><a href="javascript:void(0);">抒情</a></dd>
+			<dd><a href="javascript:void(0);">小清新</a></dd>
+			<dd><a href="javascript:void(0);">摇滚</a></dd>
+			<dd><a href="javascript:void(0);">流行</a></dd>
+		</dl>
+		<ul class='index-hot-con'>
+			<!-- <li>
+                <a href="javascript:void(0);">
+                    <img src="" style='background: red'>
+                </a>
+                <p class='index-hot-con-mc'>
+                        <span>喜欢你</span>
+                        <span> - </span>
+                        <span>邓紫棋</span>
+                </p>
+            </li> -->
+
+		</ul>
+		<div class='index-like'>
+			<h1 class='index-h1'>猜你喜欢</h1>
+		</div>
+		<ul class='index-like-con'>
+			<!-- <li>
+                <a href="javascript:void(0);">
+                    <img src="">
+                </a>
+            </li> -->
+
+		</ul>
+		<div class='index-new'>
+			<h1 class='index-h1'>新歌首发</h1>
+		</div>
+		<ul class='index-new-con'>
+			<!-- <li>
+                <a href="javascript:void(0);">
+                    <img src="">
+                </a>
+            </li> -->
+		</ul>
+	</div>
+	<div class='index-list-wrap'>
+		<div class='index-more-play'>
+			<h1 class='index-h1'>最多播放</h1>
+		</div>
+		<ul class="index-more-play-con">
+			<!--<li>
+				<a href="javascript:void(0);">
+					<span id='index-more-play-song'>光辉岁月</span>
+					-
+					<span id='index-more-play-singer'>黄家驹</span>
+				</a>
+			</li>-->
+
+		</ul>
+		<div class='index-more-download'>
+			<h1 class='index-h1'>最多下载</h1>
+		</div>
+		<ul class="index-more-play-con">
+			<!--<li>
+				<a href="javascript:void(0);">
+					<span id='index-more-download-song'>光辉岁月</span>
+					-
+					<span id='index-more-download-singer'>黄家驹</span>
+				</a>
+			</li>-->
+
+		</ul>
+	</div>
+</div>
+<!-- footer -->
+<div class='footer-wrap'>
+	<div class='footer'>
+		<p>Copyright 2016 汪星人</p>
+		<p>鸣谢：王雅男&商盼盼</p>
+		<p>毕业愉快</p>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src='js/jquery-2.1.4.min.js'></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src='js/jquery.cookie.js'></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src='js/animate.js'></script>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bs.music.mapper.SingerMapper">
+    <resultMap id="singerVo" type="com.bs.music.model.SingerVo">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="showSinger" resultMap="singerVo">
+        select s.id as singerId , s.area as areaId,sa.name as singerArea,s.name as singerName,s.search
+        from singer as s,singer_area as sa
+        where s.area = sa.id
+        <include refid="sql_area"/>
+        ORDER BY s.search
+    </select>
+    <sql id="sql_area">
+        <if test="area != null">
+            and s.area = #{area}
+        </if>
+    </sql>
+</mapper>

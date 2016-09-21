@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>播放页</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<!-- title -->
+<div class='header-wrap'>
+	<div class='header-box'>
+		<div class='header'>
+			<div class='header-logo'><img src="img/logo_cat.png" alt='logo'></div>
+			<div class='header-search'>
+				<input type="text" placeholder='歌曲\音乐人' class='search'>
+				<i class='icomoon search-font'>&#xe986</i>
+			</div>
+			<div class="header-nav">
+				<ul>
+					<li><a href="friend">寻找好友</a></li>
+					<li><a href="show">歌曲列表</a></li>
+					<li><a href="play">去播放</a></li>
+				</ul>
+			</div>
+			<div class='header-info'>
+				<ul class="header-info-ls" id='userInfo'>
+					<li>
+						<a href="javascript:void(0);" id='alarm'>
+							<i class='icomoon'>&#xe951</i>
+							<i class='msg-num'></i>
+						</a>
+
+					</li>
+					<li class='set-info'>
+						<a href="personal" id='name'></a>
+						<a href="javascript:void(0);" >
+							<i class='icomoon arrow' id='headerArrow' type='0'>&#xea41</i>
+						</a>
+					</li>
+
+				</ul>
+				<ul class="header-info-ls" id='userNone'>
+					<li>
+						<a href="login">登陆</a>
+					</li>
+					<li class='set-info'>
+						<a href="register" >注册</a>
+					</li>
+				</ul>
+				<a href="javascript:void(0);" class='info'>退出登录</a>
+				<ul class='header-info-msg'>
+					<!-- <li>
+                        <a href="javascript:void(0);" class='msg'></a>
+                        <a href="javascript:void(0);" ><i class='icomoon leaf' typeId='' state='0'>&#xe9a4</i></a>
+                    </li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div><!-- content -->
+<div class="play-content-wrap">
+	<!-- 侧边栏 -->
+	<div class="personal-list">
+		<p class="pernal-nav-title"></p>
+		<ul>
+
+		</ul>
+	</div>
+	<!-- 播放列表 -->
+	<div class='play-cont'>
+		<div class='music-nav'>
+			<ul>
+				<li>歌曲</li>
+				<li>演唱者</li>
+				<li>类型</li>
+				<li>时长</li>
+			</ul>
+		</div>
+		<div class='music-wrap'>
+			<div class="music-cont">
+				<ul class="music-cont-ls">
+					<!--<li class="music-cont-ls-li">
+						<ul class="music-cont-info-ls">
+							<li class="music-cont-info-ls-i1"><a href="javascript:void(0);"><i class='icomoon info-label label-music'>&#xe911</i></a></li>
+							<li class="music-cont-info-ls-i2"><a href="javascript:void(0);">loser</a></li>
+							<li class="music-cont-info-ls-i3"><a href="javascript:void(0);">BigBang</a></li>
+							<li class="music-cont-info-ls-i4"><a href="javascript:void(0);">《D》</a></li>
+							<li class="music-cont-info-ls-i5"><a href="javascript:void(0);">04:10</a></li>
+							<li class="music-cont-info-ls-i6"><a href="javascript:void(0);"><i class='icomoon info-label label-heart' data-favorite='0'>&#xe9da</i></a></li>
+						</ul>
+					</li>-->
+
+
+				</ul>
+			</div>
+		</div>
+		<div class="page-wrap">
+			<div class="page-box">
+				<div id="page"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- audio -->
+<div class='audio-wrap'>
+	<div class='audio-box'>
+		<div class="audio">
+			<div class='audio-options'>
+				<i class='icomoon options-last'>&#xea1f</i>
+				<i class='icomoon options-control' data-type='1'>&#xea1d</i>
+				<i class='icomoon options-next'>&#xea20</i>
+			</div>
+			<div class='audio-play'>
+				<span class='audio-time start'>00:00</span>
+				<div class='audio-bar'>
+					<div class='bar'></div>
+				</div>
+				<span class='audio-time end'>00:00</span>
+				<div class='music-info'>
+					<span class='music-name'></span>
+					<span>-</span>
+					<span class='music-singer'></span>
+				</div>
+			</div>
+			<div class='audio-model'>
+				<div class="audio-volume-label" data-type='1'><i class='icomoon'>&#xea26</i></div>
+				<div class='audio-volume-bar'>
+					<div class='volume-bar'></div>
+				</div>
+				<div class='audio-model-set'>顺序播放</div>
+				<ul class='model'>
+					<li>单曲播放</li>
+					<li>顺序播放</li>
+					<li>单曲循环</li>
+					<li>随机播放</li>
+				</ul>
+			</div>
+			<audio src='' autoplay id='music' ></audio>
+			<ul style='display: none' id="musicList">
+
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<div class='footer-wrap'>
+	<div class='footer'>
+		<p>Copyright 2016 汪星人</p>
+		<p>鸣谢：王雅男&商盼盼</p>
+		<p>毕业愉快</p>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src='js/jquery-2.1.4.min.js'></script>
+<script type="text/javascript" src='js/jquery.cookie.js'></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/play.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/laypage/laypage.js"></script>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理员管理音乐界面</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<!-- title -->
+	<!-- title -->
+	<div class='header-wrap'>
+		<div class='header-box'>
+			<div class='header'>
+				<div class='header-logo'><img src="img/logo_cat.png" alt='logo'></div>
+				<div class="header-nav">
+					<ul>
+						<li><a href="admin">音乐管理</a></li>
+						<li><a href="adminUser">用户管理</a></li>
+						<li><a href="uploadMusic">歌曲上传</a></li>
+					</ul>
+				</div>
+				<div class='header-info'>
+					<ul class="header-info-ls">
+						<li class='set-info'>
+							<a href="javascript:void(0);" id='name'>admin</a>
+							<a href="javascript:void(0);"  ><i class='icomoon arrow' id='headerArrow'>&#xea41</i></a>
+						</li>
+					</ul>
+					<a href="javascript:void(0);" class='info'  id="quite">退出登录</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- content -->
+	<div class='admin-list-wrap'>
+		<div class='admin-list-box'>
+			<div class='admin-list'>
+				<dl class='admin-ls'>
+					<dt class='admin-ls-dt'>
+					<ul class='admin-ls-dt-ls'>
+						<li class="admin-title-number">序号</li>
+						<li class='admin-title-img'>图片</li>
+						<li class='admin-title-song'>歌曲</li>
+						<li class='admin-title-singer'>歌手</li>
+						<li class='admin-title-download'>下载量</li>
+						<li class='admin-title-play'>播放量</li>
+						<li class='admin-title-collect'>收藏量</li>
+						<li class='admin-title-buy'>价格</li>
+						<li class='admin-title-sou'>搜索量</li>
+						<li class='admin-title-options'>操作</li>
+					</ul>
+					</dt>
+
+				</dl>
+			</div>
+		</div>
+		<div class="page-wrap">
+			<div class="page-box">
+				<div id="page"></div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div class='footer-wrap'>
+		<div class='footer'>
+			<p>Copyright 2016 汪星人</p>
+			<p>鸣谢：王雅男&商盼盼</p>
+			<p>毕业愉快</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src='js/jquery-2.1.4.min.js'></script>
+<script type="text/javascript" src='js/jquery.cookie.js'></script>
+<script type="text/javascript" src="js/admin-data.js"></script>
+<script type="text/javascript" src="js/admin-index.js"></script>
+<script type="text/javascript" src="js/laypage/laypage.js"></script>
+</html>

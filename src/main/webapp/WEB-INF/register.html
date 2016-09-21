@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>在线音乐频道</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div class='login-box'>
+	<div class='login-wrap register-wrap'>
+		<div class='login-head'>
+			<span class='name'>汪星人</span>
+			<a>welcome!</a>
+			<a href="javascript:void(0);" class="close">X</a>
+		</div>
+		<div class='login-con'>
+			<div class='register-content'>
+				<input type='text' placeholder='username' class='input' id='regUser'>
+				<input type='password' placeholder='password' class='input' id='regPass'>
+				<input type='password' placeholder='repeat password' class='input' id='regRepass'>
+				<div><input class='input' id='email' placeholder='email' name = "email">	</div>
+				<a href="javascript:void(0);" class='login input' id="register">register!</a>
+				<a href="login" class='rightLabel'>已有账号，请登录</a>
+			</div>
+			<div class='reg-name-valide valide'>
+				用户名不能为空
+			</div>
+			<div class='reg-pass-valide valide'>
+				密码以字母开头，只能包含数字字母，下划线，长度在6~20之间
+			</div>
+			<div class='reg-repass-valide valide'>
+				两次密码不一致
+			</div>
+			<div class='reg-email-valide valide'>
+				邮箱格式不正确
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript" src='js/jquery-2.1.4.min.js'></script>
+<script type="text/javascript" src='js/jquery.cookie.js'></script>
+<script type="text/javascript" src='js/mailAutoComplete.js'></script>
+<script type="text/javascript" src='js/log.js'></script>
+</html>

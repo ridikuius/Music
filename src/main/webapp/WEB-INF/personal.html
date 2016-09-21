@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>个人中心</title>
+</head>
+<body>
+<!-- title -->
+<div class='header-wrap'>
+	<div class='header-box'>
+		<div class='header'>
+			<div class='header-logo'><img src="img/logo_cat.png" alt='logo'></div>
+			<div class='header-search'>
+				<input type="text" placeholder='歌曲\音乐人' class='search'>
+				<i class='icomoon search-font'>&#xe986</i>
+			</div>
+			<div class="header-nav">
+				<ul>
+					<li><a href="friend">寻找好友</a></li>
+					<li><a href="show">歌曲列表</a></li>
+					<li><a href="play">去播放</a></li>
+				</ul>
+			</div>
+			<div class='header-info'>
+				<ul class="header-info-ls" id='userInfo'>
+					<li>
+						<a href="javascript:void(0);" id='alarm'>
+							<i class='icomoon'>&#xe951</i>
+							<i class='msg-num'></i>
+						</a>
+
+					</li>
+					<li class='set-info'>
+						<a href="personal" id='name'></a>
+						<a href="javascript:void(0);" >
+							<i class='icomoon arrow' id='headerArrow' type='0'>&#xea41</i>
+						</a>
+					</li>
+
+				</ul>
+				<ul class="header-info-ls" id='userNone'>
+					<li>
+						<a href="login">登陆</a>
+					</li>
+					<li class='set-info'>
+						<a href="register" >注册</a>
+					</li>
+				</ul>
+				<a href="javascript:void(0);" class='info'>退出登录</a>
+				<ul class='header-info-msg'>
+					<!-- <li>
+                        <a href="javascript:void(0);" class='msg'></a>
+                        <a href="javascript:void(0);" ><i class='icomoon leaf' typeId='' state='0'>&#xe9a4</i></a>
+                    </li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- content -->
+<div class="personal-content">
+	<div class="personal-list">
+		<p class="pernal-nav-title">好友榜</p>
+		<ul id='fllowers'>
+			<!-- <li class='fllower-li'>
+                <a href="javascript:void(0);">
+                    <i class='icomoon personal-nav-label'>&#xe951</i><span></span>
+                </a>
+            </li> -->
+		</ul>
+		<p class="pernal-nav-title">粉丝榜</p>
+		<ul id='fllowings'>
+			<!-- <li class='fllowing-li'>
+                <a href="javascript:void(0);">
+                    <i class='icomoon personal-nav-label'>&#xe951</i><span></span>
+                </a>
+            </li> -->
+		</ul>
+	</div>
+	<div class="personal-info">
+		<div class="personal-center">
+			<div class='pernal-info'>
+				<div class="pernal-pic-wrap">
+					<img src="img/dog.jpg" id='personalLogo'>
+				</div>
+				<div class="pernal-info-text">
+					<div class="pernal-info-name" id='userName'></div>
+					<div class="pernal-info-money">
+						<span id='money'></span>麦币
+						<a href="javascript:void(0);" id="addMoney">充值</a>
+					</div>
+					<div class="pernal-info-active">
+						<span id='fllowersNum'></span>Fllowers
+						<span id='fllowingsNum'></span>Fllowings
+					</div>
+				</div>
+			</div>
+			<div class='pernal-edit'>编辑个人资料</div>
+			<div class='pernal-add-follow'>
+				<a href="javascript:void(0);" id='addFollw'>加关注</a>
+			</div>
+		</div>
+
+		<div class='pernal-nav'>
+			<div class="pernal-nav-wrap">
+				<ul class="pernal-nav-ls">
+					<li><a href="javascript:void(0);" id='default'>全部歌曲</a></li>
+					<li><a href="javascript:void(0);" id='collect'>收藏歌曲</a></li>
+					<li><a href="javascript:void(0);" id='down'>下载歌曲</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class='music-wrap'>
+			<div class="music-cont">
+				<ul class="music-cont-ls">
+					<!--<li class="music-cont-ls-li">
+						<ul class="music-cont-info-ls">
+							<li class="music-cont-info-ls-i1"><a href="javascript:void(0);"><i class='icomoon info-label label-music'>&#xe911</i></a></li>
+							<li class="music-cont-info-ls-i2"><a href="javascript:void(0);">loser</a></li>
+							<li class="music-cont-info-ls-i3"><a href="javascript:void(0);">BigBang</a></li>
+							<li class="music-cont-info-ls-i4"><a href="javascript:void(0);">日韩</a></li>
+							<li class="music-cont-info-ls-i5"><a href="javascript:void(0);">04:10</a></li>
+							<li class="music-cont-info-ls-i6"><a href="javascript:void(0);"><i class='icomoon info-label label-heart'>&#xe9da</i></a></li>
+						</ul>
+					</li>-->
+
+
+				</ul>
+			</div>
+			<div class="page-wrap">
+				<div class="page-box">
+					<div id="page"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
+
+<!-- 弹出框 -->
+<div class='frame-wrap'>
+	<div class='frame-box'>
+		<div class='frame'>
+			<div class='frame-label'>
+				<p>您要付费的歌曲是：</p>
+				<p>麦币：</p>
+				<p>您的账户余额为：</p>
+			</div>
+			<div class='frame-text'>
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+			<div style="clear: both"></div>
+			<div class='frame-btn'>
+				<a href="javascript:void(0)" id='frame-btn-pay' class='btn-pay'>支付</a>
+				<a href="javascript:void(0)" id='frame-btn-cancel' class='btn-cancel'>取消</a>
+			</div>
+		</div>
+		<a href="javascript:void(0);" class='close' id='frameClose'>X</a>
+		<a href="javascript:void(0);" class='add-money' id='frameAddMoney'>去充值</a>
+	</div>
+</div>
+<!-- 支付成功弹出框 -->
+<div class='pay-success' id='payClose' ></div>
+<!-- 充值弹窗口 -->
+<div class='add-money-wrap'>
+	<div class='add-mone-box'>
+		<div class='add-money-label'>
+			<p>当前金额：</p>
+			<p>充值金额：</p>
+		</div>
+		<div class='add-money-text'>
+			<p></p>
+			<input type="text" id='addMoneyNumber'>
+		</div>
+		<div style="clear:both"></div>
+		<div class='add-mone-btn'>
+			<a href="javascript:void(0);" id='addMoneyOk'>充值</a>
+			<a href="javascript:void(0);" id='addMoneyCancel'>取消</a>
+		</div>
+		<div class='close add-money-close'>X</div>
+	</div>
+</div>
+<!-- 充值成功 -->
+<div class='add-money-success-wrap'>
+	<div class='add-money-success'></div>
+</div>
+
+<!-- 编辑个人资料 -->
+<div class='personal-edit-wrap'>
+	<div class="personal-edit-box">
+		<div class='personal-edit'>
+			<div class='personal-edit-label'>
+				<p>昵称：</p>
+				<p>性别：</p>
+				<p>出生日期：</p>
+			</div>
+			<div class='personal-edit-text'>
+				<p><input type="text" value="小熊"></p>
+				<p><input type="text" value="女"></p>
+				<p><input type="text" value="1993-03-21"></p>
+			</div>
+			<div style="clear:both"></div>
+			<div class='personal-edit-pass-content'>
+				<div class='personal-edit-pass-content-label'>
+					<p>请输入原始密码：</p>
+					<p>请输入新密码：</p>
+					<p>请再输入一次：</p>
+				</div>
+				<div class='personal-edit-pass-content-text'>
+					<p><input type="password" value='' id="oldPass"></p>
+					<p><input type="password" value="" id="newPass"></p>
+					<p><input type="password" value="" id="reNewPass"></p>
+				</div>
+				<div class='personal-edit-pass-content-valide' id='passValideMsg'></div>
+			</div>
+			<div class='personal-edit-pass'>
+				<a href='javascript:void(0);' id='editPass' class='edit-pass'>修改密码</a>
+				<a href='javascript:void(0);' id='editPassCancle' class='edit-pass-cancle'>算了，喵~</a>
+			</div>
+			<div class='personal-edit-btn'>
+				<a href="javascript:void(0);" class='edit-btn-ok' id='editBtnOk'>保存</a>
+				<a href="javascript:void(0);" class='edit-btn-cancle' id='editBtnCancle'>取消</a>
+			</div>
+			<div class="close personal-edit-close" id='personalEditClose'>X</div>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<div class='footer-wrap'>
+	<div class='footer'>
+		<p>Copyright 2016 汪星人</p>
+		<p>鸣谢：王雅男&商盼盼</p>
+		<p>毕业愉快</p>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src='js/jquery-2.1.4.min.js'></script>
+<script type="text/javascript" src='js/jquery.cookie.js'></script>
+<script type="text/javascript" src="js/ajaxupload.3.6.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/personal.js"></script>
+<script type="text/javascript" src="js/laypage/laypage.js"></script>
+
+</html>

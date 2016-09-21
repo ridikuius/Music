@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bs.music.mapper.SongMapper">
+    <resultMap id="songVo" type="com.bs.music.model.SongVo">
+
+    </resultMap>
+    <select id="showSongInfo" resultMap="songVo">
+        select s.id as songId,s.name as songName,s.type as typeId ,t.name as songType,s.singer as singerId,i.name as
+        singerName,
+        s.song_url as songUrl,s.time_length as timeLength,s.price as songCost,i.protait as imageUrl,
+        s.search_count as searchCount,s.collect_count as collectCount,s.download_count as downloadCount,s.play_count as
+        playCount
+        from song as s,song_type as t,singer as i
+        where s.singer = i.id
+        AND s.type = t.id
+    </select>
+
+    <select id="selectAlls" resultMap="songVo">
+        select s.id as songId,s.name as songName,s.singer as singerId,si.name as singerName,s.type as typeId,
+        t.name as songType,s.time_length as timeLength,si.protait as imageUrl,s.price as songCost,s.song_url as songUrl
+        from song as s,singer as si ,song_type as t
+        where s.singer = si.id
+        AND s.type = t.id
+        AND(
+        <include refid="sql_search_name"/>
+        <include refid="sql_search_type"/>
+        <include refid="sql_search_region"/>
+        )
+
+    </select>
+
+    <sql id="sql_search_name">
+        <if test="search != null and search != ''">
+            s.name like concat('%',concat(#{search}, '%'))
+        </if>
+    </sql>
+    <sql id="sql_search_type">
+        <if test="search != null">
+            or si.name like concat('%',concat(#{search}, '%'))
+        </if>
+    </sql>
+    <sql id="sql_search_region">
+        <if test="search != null and search != ''">
+            or t.name like concat('%',concat(#{search}, '%'))
+        </if>
+    </sql>
+
+    <sql id="sql_name">
+        <if test="name != null and name != ''">
+            and s.name like concat('%',concat(#{name}, '%'))
+        </if>
+    </sql>
+    <sql id="sql_type">
+        <if test="type != null">
+            and s.type = #{type}
+        </if>
+    </sql>
+    <sql id="sql_id">
+        <if test="id != null">
+            and s.id = #{id}
+        </if>
+    </sql>
+    <sql id="sql_singer">
+        <if test="singer != null">
+            and s.singer = #{singer}
+        </if>
+    </sql>
+</mapper>
